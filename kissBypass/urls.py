@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from imageDatabase import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.ImageHashView.as_view(), name='list'),
+    path('<int:image_hash>', views.ImageWordsView.as_view(), name='hash lockup')
 ]
