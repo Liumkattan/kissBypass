@@ -25,7 +25,7 @@ SECRET_KEY = 'qv)jej+6v%v@qjqb^y=!-andj(9j1xh$-gp@)m)e2jd8%@7+)l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Disable Django interface
