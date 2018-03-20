@@ -19,6 +19,8 @@ from imageDatabase import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.ImageHashView.as_view(), name='list'),
-    path('<int:image_hash>', views.ImageWordsView.as_view(), name='hash lockup')
+    path('', views.ImageHashView.as_view(), name='list all'),
+    path('<str:image_hash>', views.ImageWordsView.as_view(), name='hash lockup'),
+    path('hash/', views.HashView.as_view(), name='list hash'),
+    path('new/', views.InputView.as_view(), name='add image')
 ]
